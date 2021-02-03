@@ -1,6 +1,6 @@
 import React from "react";
-import s from "./App.module.css";
 import HW4 from "../../../p2-homeworks/h4/HW4";
+import s from './App.module.css'
 
 function App() {
     return (
@@ -13,7 +13,7 @@ function App() {
             {/*<HW5/>*/}
 
         </div>
-    );
+    )
 }
 
-export default App;
+export default App

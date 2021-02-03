@@ -22,7 +22,7 @@ function Message(props: messageDataType) {
             </div>
 
         </div>
-    );
+    )
 }
 
-export default Message;
+export default Message

@@ -2,11 +2,11 @@ import React from "react";
 import Message from "./Message";
 
 const messageData = {
-    avatar: "https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg",
-    name: "Anatolii",
-    message: "How are you?",
-    time: "22:00",
-};
+    avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
+    name: 'Some Name',
+    message: 'some text',
+    time: '22:00',
+}
 
 
 function HW1() {
@@ -33,7 +33,7 @@ function HW1() {
             {/*<AlternativeMessage/>*/}
             {/*<hr/>*/}
         </div>
-    );
+    )
 }
 
-export default HW1;
+export default HW1
