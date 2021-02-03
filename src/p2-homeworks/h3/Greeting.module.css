@@ -1,7 +1,22 @@
 .someClass {
 
 }
+.addButton{
+    width: 100px;
+}
 
-.error {
+button:hover {
+    background-color: #c933ff;
+    color: yellow;
+    border: 2px solid #19a9a0;
+}
+.success {
+    border: 2px solid green;
+}
+.errorFalse {
     border: 1px solid red;
+
+}
+.addInput{
+    width: 250px;
 }

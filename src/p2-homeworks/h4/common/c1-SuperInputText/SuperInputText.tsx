@@ -24,7 +24,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
-    const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
+    const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {debugger
         onChange // если есть пропс onChange
         && onChange(e); // то передать ему е (поскольку onChange не обязателен)
 
@@ -39,7 +39,8 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     }
 
     const finalSpanClassName = `${s.error} ${spanClassName ? spanClassName : ""}`;
-    const finalInputClassName = `${s.errorInput} ${className}`; // need to fix with (?:) and s.superInput
+    const finalInputClassName = `${s.errorInput} ${className ? `${s.superInput}` : ""}`;
+    // need to fix with (?:) and s.superInput
 
     return (
         <>
@@ -48,6 +49,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 onChange={onChangeCallback}
                 onKeyPress={onKeyPressCallback}
                 className={finalInputClassName}
+
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />

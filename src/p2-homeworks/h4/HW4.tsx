@@ -4,6 +4,7 @@ import s from "./HW4.module.css";
 import SuperButton from "./common/c2-SuperButton/SuperButton";
 import SuperCheckbox from "./common/c3-SuperCheckbox/SuperCheckbox";
 
+
 function HW4() {
     const [text, setText] = useState<string>("");
     const error = text ? "" : "error";
@@ -30,8 +31,9 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={s.blue} // проверьте, рабоет ли смешивание классов
                 />
+
 
                 {/*should work (должно работать)*/}
                 <SuperButton
@@ -42,17 +44,12 @@ function HW4() {
                 </SuperButton>
 
                 {/*should work (должно работать)*/}
-                <SuperCheckbox
-                    checked={checked}
-                    onChangeChecked={setChecked}
-                >
-                    some text {/*// этот текст попадёт в children*/}
-                </SuperCheckbox>
+                <SuperCheckbox checked={checked} onChangeChecked={setChecked}/>
 
                 {/*// onChange тоже должен работать*/}
                 <SuperCheckbox checked={checked} onChange={testOnChange}/>
             </div>
-
+            <a href=""></a>
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperInputText/>*/}

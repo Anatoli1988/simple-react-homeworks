@@ -1,12 +1,16 @@
 .superInput {
-
+    color: rgba(0, 0, 0, 0.98);
+    margin-bottom: 15px;
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    /*border: 3px solid lime;*/
+    background: aliceblue;
 }
 
 .error {
     color: red;
+    padding-bottom: 10px;
 }
+
+
