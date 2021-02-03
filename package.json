@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Anatoli1988.github.io/homework",
   "name": "simple-react-homeworks",
   "version": "0.1.0",
   "private": true,
@@ -17,7 +18,6 @@
     "typescript": "~3.7.2",
     "uuid": "^8.3.2"
   },
-  "homepage": "https://Anatoli1988.github.io/homework",
   "scripts": {
     "predeploy": "npm run build",
     "start": "react-scripts start",
