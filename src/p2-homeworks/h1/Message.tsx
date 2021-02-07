@@ -10,7 +10,6 @@ type messageDataType = {
 }
 
 function Message(props: messageDataType) {
-    debugger
     return (
         <div className={s.message}>
             <img src={props.avatar} alt="text"/>

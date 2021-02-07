@@ -1,0 +1,13 @@
+.spanText{
+    background-color: #5eff00;
+    border: 1px solid red;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.photo{
+    width: 116px;
+    height: 103px;
+}

@@ -6,7 +6,10 @@ type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 
 type SuperButtonPropsType = DefaultButtonPropsType & {
     red?: boolean
+    // restoreState: (key: string, defaultState: any) => void
+    // restoreState: (event: "MouseEvent<HTMLButtonElement, MouseEvent>") => void
 }
+
 
 const SuperButton: React.FC<SuperButtonPropsType> = (
     {

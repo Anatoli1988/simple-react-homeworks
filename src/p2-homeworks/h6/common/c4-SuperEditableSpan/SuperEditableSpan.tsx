@@ -1,5 +1,9 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState} from "react";
 import SuperInputText from "../../../h4/common/c1-SuperInputText/SuperInputText";
+import s from './SuperEditableSpan.module.css'
+import photo from './../image/photo.gif'
+
+
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
@@ -17,6 +21,7 @@ type SuperEditableSpanType = DefaultInputPropsType & { // и + ещё пропс
     spanProps?: DefaultSpanPropsType // пропсы для спана
 };
 
+
 const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     {
         autoFocus, // игнорировать изменение этого пропса
@@ -31,25 +36,25 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {};
 
     const onEnterCallback = () => {
-        // setEditMode(); // выключить editMode при нажатии Enter
+        setEditMode(true); // выключить editMode при нажатии Enter
 
         onEnter && onEnter();
     };
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
-        // setEditMode(); // выключить editMode при нажатии за пределами инпута
+        setEditMode(false); // выключить editMode при нажатии за пределами инпута
 
         onBlur && onBlur(e);
     };
     const onDoubleClickCallBack = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-        // setEditMode(); // включить editMode при двойном клике
+        setEditMode(true); // включить editMode при двойном клике
 
         onDoubleClick && onDoubleClick(e);
     };
 
-    const spanClassName = `${"сделать красивый стиль для спана"} ${className}`;
+    const spanClassName = `${s.spanText} ${className}`;
 
     return (
-        <>
+        <div className={s.wrapper}>
             {editMode
                 ? (
                     <SuperInputText
@@ -66,12 +71,17 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
 
                         {...restSpanProps}
                     >
+                        <span > <img src={photo}  className={s.photo} alt=""/></span>
+
+
+
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}
                         {children || restProps.value}
                     </span>
+
                 )
             }
-        </>
+        </div>
     );
 }
 
